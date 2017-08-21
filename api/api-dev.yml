@@ -1,3 +1,13 @@
+eureka:
+  instance:
+    hostname: c2weapi-gateway-server.marathon.l4lb.thisdcos.directory
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      #defaultZone: http://192.168.10.168:11020/eureka/
+      defaultZone: http://c2weeureka-server.marathon.l4lb.thisdcos.directory:11020/eureka/
+
 endpoints:
   restart:
     enabled: true
