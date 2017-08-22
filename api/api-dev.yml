@@ -16,6 +16,21 @@ endpoints:
   health:
     sensitive: false
 
+zuul:
+  routes:
+    c2-extract-service:
+      path: /c2-extract-service/**
+      service-id: c2-extract-service
+    c2-rules-service:
+      path: /c2-rules-service/**
+      service-id: c2-rules-service
+    c2-upload-service:
+      path: /c2-upload-service/**
+      service-id: c2-upload-service
+  host:
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 100000
+
 hystrix:
     command:
         default:
